@@ -5,7 +5,6 @@ const tesseract = require('node-tesseract-ocr');
 const path = require('path');
 require('datejs');
 var fs = require('fs');
-const HummusRecipe = require('hummus-recipe');
 const pdf = require('pdf-poppler');
 
 
