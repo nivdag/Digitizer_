@@ -1,0 +1,19 @@
+<div class="wrapper_div">
+
+    <div class="col">
+
+        <div *ngFor="let doc of docsArray; let i = index" class="row_item">
+            <img src={{doc.imgPath}}>
+            <p class='worth'>{{doc.price}}</p>
+            <p class='timeLeft'>{{doc.timeLeft}}</p>
+            <p class='numPages'>{{doc.numberPages}}</p>
+            <p class='createdTime'>{{doc.createdTime}}</p>
+            <p class='fileSize'>{{doc.fileSize}}</p>
+            <p class='numChars'>{{doc.numChars}}</p>
+            <p class='estWrkTime'>{{doc.estWorkTime}}</p>
+        </div>
+
+    </div>
+
+
+</div>

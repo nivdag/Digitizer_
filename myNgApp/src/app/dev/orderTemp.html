@@ -1,0 +1,56 @@
+
+<div>change</div>
+<mat-card class="order-card">
+        <mat-card-header>
+            <mat-card-title>Order details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="order-form">
+                <table class="order-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="order-full-width">
+                                <input matInput placeholder="Order name" [(ngModel)]="ordername" name="ordername" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field class="order-full-width">
+                                <mat-label>Select output extension</mat-label>
+                                <mat-select [(value)]="selected">
+                                    <mat-option value="doc">.docx</mat-option>
+                                    <mat-option value="txt">.txt</mat-option>
+                                </mat-select>
+                                <input matInput placeholder="Extension" [(ngModel)]="extension" name="extension" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field class="order-full-width">
+                                <mat-label>Select priority</mat-label>
+                                <mat-select [(value)]="selected">
+                                    <mat-option value="none">within seven (7) work days</mat-option>
+                                    <mat-option value="fast">within five (5) work days</mat-option>
+                                    <mat-option value="premium">within three (3) work days</mat-option>
+                                </mat-select>
+                                <input matInput placeholder="Priority" [(ngModel)]="priority" name="priority" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <mat-form-field>
+                                <input matInput placeholder="File name" readonly>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="fileInput.click()" color="primary">Choose File</button>
+            <input hidden (change)="onSelectFile($event)" #fileInput type="file" id="file" accept='image/*'>
+        </mat-card-actions>
+    </mat-card>

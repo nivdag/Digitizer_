@@ -1,0 +1,17 @@
+<mat-card class="cardInner">
+    <mat-card-header>
+        <mat-card-title>({{crossData.price | currency}}) Order details</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+        <p>Convert {{crossData.srcExtension}} to {{crossData.destExtension}} </p>
+        <p>{{crossData.filename}}</p>
+        <div class='parent'>
+            <mat-icon class='child inline-block-child'>access_time</mat-icon>
+            <p class='child inline-block-child'>{{crossData.priority}}</p>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="btn btn-primary" type="submit">Purchase ({{crossData.price | currency}})</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,12 @@
+.wrapper_div {
+    margin-top: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.outlet_wrapper {
+    overflow: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%; 
+}

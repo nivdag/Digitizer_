@@ -1,0 +1,32 @@
+<div class="container-fluid table_wrapper">
+
+    <h2 class="h3">Auction</h2>
+    <br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">file name</th>
+                <th scope="col">Time left</th>
+                <th scope="col">Worth</th>
+                <th scope="col">Link to Image</th>
+                <th scope="col">Link to OCR</th>
+                <th scope="col">Take order</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of authorizedDocs; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{data.fileName}}</td>
+                <td>{{data.timeLeft | date:'d'}} days {{data.timeLeft | date: 'h'}} hours </td>
+                <td>{{data.empFee | currency}}</td>
+                <td><button type="button" class="btn btn-primary btn-sm" (click)="download(i)">Download</button></td>
+                <td><button type="button" class="btn btn-primary btn-sm" (click)="downloadOcrFile(i)">Download</button>
+                </td>
+                <td><button type="button" class="btn btn-primary btn-sm" (click)="takeOrder(i)">Take</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

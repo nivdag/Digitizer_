@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbar">
+    <div>
+        <button mat-icon-button routerLink="/">
+            <img src="../../../assets/logo.png">
+        </button>
+    </div>
+    <div class="span_box">
+        <span [hidden]="!isEmp"><button mat-button routerLink="/work-space">Work space</button></span>
+        <span [hidden]="!isEmp"><button mat-button routerLink="/auction">Auction</button></span>
+        <span><button mat-button routerLink="/manage-orders">Manage orders</button></span>
+        <span><button mat-button routerLink="/order">Order</button></span>
+        <span *ngIf="!_authService.loggedIn()"><button mat-button routerLink="/login">Sign in</button></span>
+        <span *ngIf="!_authService.loggedIn()"><button mat-stroked-button routerLink="/signup">Sign up</button></span>
+        <span *ngIf="_authService.loggedIn()"><button (click)="_authService.logoutUser()" mat-stroked-button>Log
+                out</button></span>
+    </div>
+
+</mat-toolbar>

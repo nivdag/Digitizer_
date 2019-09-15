@@ -1,0 +1,24 @@
+
+.wrapper {
+    margin-top: 4.5%;
+    margin-bottom: 1px;
+    background-color: #f1f5fd;
+
+}
+
+.btn_cancel {
+    background-color: #1e3d68;
+    color: white;
+}
+
+.text_design {
+    /* font-family: 'Mirza'; */
+    font-size: 15px;
+}
+/* .pending_table_div {
+    top: 10%;
+}
+
+.track_table_div {
+    padding-bottom: 5%;
+} */

@@ -1,0 +1,12 @@
+.table_wrapper {
+  margin-top: 5%;
+  height: 100%;
+}
+
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }

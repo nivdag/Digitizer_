@@ -1,0 +1,69 @@
+<div class="container-fluid wrapper">
+
+    <div class="pending_table_div">
+        <h2 class="h3">Pending authorization</h2>
+
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr class="text_design h6">
+                    <th scope="col">#</th>
+                    <th scope="col">file name</th>
+                    <th scope="col">extension</th>
+                    <th scope="col">priority</th>
+                    <th scope="col">price</th>
+                    <th style="text-align:center" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text_design" *ngFor="let pendDoc of pendingDocs; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{pendDoc.fileName}}</td>
+                    <td>{{pendDoc.extension}}</td>
+                    <td>{{pendDoc.priority}}</td>
+                    <td>{{pendDoc.price | currency}}</td>
+                    <td><span>
+                            <button style="margin-top:-5px; margin-left: 20%;" type="button"
+                                class="btn btn-primary btn-sm" (click)="authorizeThisDocument(i)">Authorize</button>
+                            <button style="margin-top:-5px; margin-left: 20%" type="button"
+                                class="btn btn-sm btn_cancel" (click)="deleteThisDocument(i)">Cancel</button>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="track_table_div">
+        <br>
+        <h2 class="h3">Track orders</h2>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">file name</th>
+                    <th scope="col">output extension</th>
+                    <th scope="col">priority</th>
+                    <th scope="col">Time left</th>
+                    <th scope="col">Taken</th>
+                    <th scope="col">Link to result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let authDoc of authorizedDocs; let j = index">
+                    <td>{{j + 1}}</td>
+                    <td>{{authDoc.fileName}}</td>
+                    <td>{{authDoc.extension}}</td>
+                    <td>{{authDoc.priority}}</td>
+                    <td>{{authDoc.timeLeft | date:'d'}} days {{authDoc.timeLeft | date: 'h'}} hours </td>
+                    <td *ngIf="authDoc.empId; else elseBlock">Yes</td>
+                    <ng-template #elseBlock>
+                        <td>Not yet</td>
+                    </ng-template>
+                    <td><button [disabled]="!authDoc.resultPath" type="button" class="btn btn-primary btn-sm"
+                            (click)="downloadResultFile(j)">Download</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

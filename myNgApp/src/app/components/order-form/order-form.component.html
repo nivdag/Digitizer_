@@ -1,0 +1,37 @@
+<div class="container-fluid col-md-4 col-md-offset-4">
+
+    <h3 class="col-sm-10 h3_wrapper h3">Create order</h3>
+    <br>
+
+    <div class="wrapper_div">
+
+        <form #userForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+
+            <div class="form-group mx-sm-3 mb-2">
+                <label class="h6">Select output file type</label>
+                <select required #slctExt="ngModel" [class.is-invalid]="slctExt.is-invalid && slctExt.touched" class="custom-select" name="orderOutputExtension" [(ngModel)]="orderModel.extension">
+                    <option value=''>extension</option>
+                    <option *ngFor="let ext of extensions">{{ ext }}</option>
+                </select>
+                <small class="text-danger" [class.d-none]="slctExt.valid || slctExt.untouched">Please choose an output file type</small>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+                <label class="h6">Choose Priority</label>
+                <select required #slctPrio="ngModel" [class.is-invalid]="slctPrio.is-invalid && slctPrio.touched" class="custom-select" name="orderPriority" [(ngModel)]="orderModel.priority">
+                    <option value=''>Priority</option>
+                    <option *ngFor="let prio of priorities">{{ prio }}</option>
+                </select>
+                <small class="text-danger" [class.d-none]="slctPrio.valid || slctPrio.untouched">Please choose a priority</small>
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+                <input required type="file" accept="application/pdf, image/*" (change)="onSelectFile($event)">
+            </div>
+            <div class="col-sm-10 btn_wrapper">
+                <button class="btn btn-secondary button_color" [disabled]="userForm.form.invalid || !isSelected" type="submit">Upload to get the price</button>
+            </div>
+        </form>
+    </div>
+
+</div>

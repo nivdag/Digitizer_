@@ -1,0 +1,59 @@
+<div style="margin-top: 4.5%;">
+
+    <div class="top_box">
+        <h2 style="margin-top: 2%">Hello {{userName}}</h2>
+
+        <div class="text_container flex-container">
+            <div class="text_box box1 h3">
+                <p>Currently working on {{docInfo.fileName}}</p>
+
+
+                <p>Complete the task in {{docInfo.timeLeft | date:'d'}} days and {{docInfo.timeLeft | date: 'h'}}
+                    hours
+                    to earn {{docInfo.price | currency}}</p>
+            </div>
+
+            <div class="text_box box2 h3">
+                <p>File size is {{fileSizeString}}</p>
+                <p>priority: {{docInfo.priority}}</p>
+                <p>extension: {{docInfo.extension}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mid_box">
+        <span class="dot dot1">
+            <p>Download the original file</p>
+            <button class="btn" (click)="download(docInfo.id)">Original image</button>
+        </span>
+
+        <span class="dot dot2">
+            <p>Download the OCR files</p>
+            <button class="btn" (click)="downloadOcrFile(docInfo.id)">OCR files</button>
+        </span>
+    </div>
+
+    <!-- <div [hidden]="!isPdf" class="work_box">
+
+        <div class="form-group textarea_box">
+            <input type="file" accept="application/pdf, image/*" (change)="onSelectFile($event)">
+            <label>you can write text here and save it to your computer</label>
+            <textarea class="form-control txtArea" rows="10"></textarea>
+        </div>
+
+        <div class="img_box">
+            <img [hidden]="isPdf" class="theimg" [src]="imageToShow" *ngIf="!isImageLoading; else noImageFound">
+            <ng-template #noImageFound>
+                <img [hidden]="isPdf" class="theimg" src="../../../assets/png.png">
+            </ng-template>
+        </div>
+
+    </div> -->
+
+    <div class="container upload_box">
+        <input class="btn btn-outline-secondary input_file" accept="application/pdf, text/plain, application/msword" type="file" (change)="onSelectedResult($event)">
+        <button class="btn btn-outline-secondary input_file" [disabled]="!selectedFile" (click)="submitResult()">Submit</button>
+    </div>
+
+
+</div>

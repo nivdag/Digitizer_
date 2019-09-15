@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <div id="block1">
+        <img [src]="imgURL" height="200"> <br />
+        <input type='file' accept='image/*' (change)="onSelectFile($event)">
+    </div>
+    <div id="block2">
+        <textarea readonly></textarea>
+        <button type="button">ocr</button>
+    </div>
+</div>

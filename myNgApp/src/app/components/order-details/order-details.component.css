@@ -1,0 +1,10 @@
+.cardInner {
+    margin-top: 8%;
+    max-width: 250px;
+
+}
+
+.inline-block-child {
+    display: inline-block;
+    
+}

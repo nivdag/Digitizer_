@@ -1,0 +1,142 @@
+.top_box {
+    /* background-color: #f1f5fd; */
+    background-color: #d1d6d6;
+
+    /* color: #EDF2F4; */
+    color: black;
+
+
+    border-color: red;
+    border-width: 5px;
+    border-style: none;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+
+
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    
+}
+
+.flex-container {
+    display: flex;
+    padding: 12px;
+  }
+
+.text_box {
+    margin-top: 2%;
+    font-size: 15px;
+}
+
+.box1 {  border-color: red;
+    border-width: 5px;
+    border-style: none;
+}
+
+.box2 {  border-color: red;
+    border-width: 5px;
+    border-style: none;
+    margin-left: 40%;
+}
+
+.work_box {
+    display: flex;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border-box;
+
+
+    border-color: red;
+    border-width: 5px;
+    border-style: none;
+
+    padding: 40px;
+
+}
+
+.txtArea {
+    resize: none;
+    box-sizing: border-box; 
+    height: 92%;;
+
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    
+}
+
+.theimg {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 650px;
+    
+    border-color: gray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+
+}
+
+.mid_box {
+
+    border-color: red;
+    border-width: 5px;
+    border-style: none;
+
+    margin-left: 23%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    margin-top: 2.5%;
+
+    display: flex;
+    justify-content: space-between;
+}
+.dot {
+    height: 250px;
+    width: 250px;
+    background-color: #d1d6d6;
+    display: inline-block;
+
+    border-color: rgb(200, 206, 205);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+
+    text-align: center;
+  }
+
+.dot p {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 33%;
+}
+
+.dot button {
+    border: none;
+    background-color: inherit;
+    text-decoration: underline;
+    color: blue;
+    margin-bottom: 33%;
+}
+
+.upload_box {
+    border-color: red;
+    border-width: 5px;
+    border-style: none;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.input_file {
+    border-radius: 10px;
+    margin-bottom: 4%;
+}
+
+
