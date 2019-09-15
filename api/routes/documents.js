@@ -37,7 +37,6 @@ const upload = multer({
 //test
 
 router.post('/free', upload.single('file'), DocumentsController.document_free_ocr);
-
 ////
 router.get('/myorders', checkAuth, DocumentsController.documents_get_my_docs);
 
@@ -49,7 +48,7 @@ router.post('/ocr/download/:documentId', DocumentsController.download_docOCR);
 router.post('/result/download/"documentId', DocumentsController.documents_get_my_result);
 
 
-router.get('/', checkAuth, HasRole([Role.Admin, Role.Seller]), DocumentsController.documents_get_all);
+router.get('/', checkAuth, DocumentsController.documents_get_all);
 router.post('/', checkAuth, upload.single('file'), DocumentsController.documents_create_document);
 
 //router.get('/:documentId', DocumentsController.documents_get_document);

@@ -1,0 +1,110 @@
+ 
+
+Motor size::Char[] | Motor size of the car
+
+ 
+
+Fuel type::Char[] Fuel type that car uses
+
+ 
+
+Other::Char[] All other information related to car. Information is
+
+organized same as ‘other’ attribute of ‘Employee’ entity
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Record
+
+Plate::Char[] Plate number of the recorded car
+Entrance::Date Entrance time of the car
+Exit::Date Exit time of the car
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.1.2 Relationships
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Car
+Employee
+PK,FK1 | Plate
+Pk |ID Record
+model
+PK | Plate
+FirstName [t-—owns—t+< color -H---has---O<
+LastName chassis entrance
+Department motor size exit
+other fuel type
+other
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+5. Behavioral Model and Description
+
+5.1. Description for software behavior
+
+Our software is expected to be powered on all the time. It should monitor an area,
+
+constantly and repeatedly getting view, and deduct information from the view of that area.
+
+12
+

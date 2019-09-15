@@ -1,0 +1,97 @@
+ 
+
+Augmenter Tracker
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Recognizer
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+AR
+
+ 
+
+Vv
+
+ 
+
+ 
+
+Screen ft User Interface <
+
+ 
+
+ 
+
+Central controller
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+¥
+
+ 
+
+Image Acquisition
+Device
+
+ 
+
+ 
+
+ 
+
+Figure 1
+
+2.2. Product Functions
+
+Software will recognize cars from their plates. It will track the cars and find their speeds. On
+
+Database
+
+ 
+
+demand, which is a click input, it will show real time information about cars on the screen.
+
+Since our software is for making the job of officers easier, there is not much use case. Use
+
+cases present in the system are initializing the system, clicking on a car to see information about
+
+it, and saving a frame to access it later. Use cases are depicted below:
+
+ 
+

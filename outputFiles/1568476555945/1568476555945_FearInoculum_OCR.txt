@@ -1,0 +1,36 @@
+In addition, system will be dependent on the following constraints:
+e Heavy processing will be done in limited time thus computer must have more than two CPU
+cores to handle concurrent processing better.
+e Image quality is very important. Lighting of the area, concentrated dust on the car plate, and
+
+air effects like fog might reduce precision
+
+System should work on a general computer. It will not contain any hardware designed for image
+
+processing. Implementation will be done taking this constraint into account.
+
+3. Specific Requirements
+
+3.1. Interface Requirements
+
+The primary input to the system is the image acquired from the device, i.e. camera. After object
+recognition and object tracking phases, this image is used in augmented reality phase with the
+resultant information. Eventually, the watcher can see enhanced view of the area on the screen.
+
+System also is open to user input in terms of mouse clicks and/or keyboard. The watcher must be
+able to click onto a car to see additional information such as profile of the driver if he/she is an
+employee.
+
+The watcher will also be able to save a special frame with a mouse click.
+
+The records of each cars entrance and exit times are kept in the database, user can access this
+information any time he wants by providing plate number. This information will be shown in another
+window as a list.
+
+User can change basic settings of the software like color of border augmentation.
+
+As explained in Section 2.1, the system consists of mainly three components. They are camera,
+processing unit and screen. Since processing unit and screen will be on the same machine, the interface
+
+between them will be straightforward. Camera will be connected to that machine (laptop).
+

@@ -1,0 +1,43 @@
+[1]
+
+[2]
+
+database.
+
+The benefit of this product is mainly about security. It can be used for assisting
+security officers to decide on action.
+
+If desired, in the future, this software can be integrated of bigger security system which
+automatically allows or disallows entry of a car. Since current scope does not include this
+
+function, the system will only assist security officers in their decision.
+
+1.4. User and Literature Survey
+
+There are similar products being used by various police forces. Most of the existing products
+only deals with recognition of cars from their plates, they do not combine this feature with
+
+tracking or augmented reality. [2]
+
+1.5. Definitions and Abbreviations
+
+SRS: Software Requirements Specification
+OCR: Optical Character Recognition
+
+CT: Car Tracker
+
+CR: Car Recognizer
+
+DB: database
+
+IAD: Image acquisition device
+
+FPS: Frame per second
+
+1.6. References
+IEEE Std 830-1998: IEEE Recommended Practice for Software Requirements
+Specifications
+Wikipedia the free encyclopedia,17:41 24 November 2010,
+
+<http://en.wikipedia.org/wiki/Automatic_number_plate_recognition>
+

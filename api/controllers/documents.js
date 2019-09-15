@@ -1,4 +1,5 @@
 const Document = require('../models/document');
+const User = require('../models/user');
 const mongoose = require('mongoose');
 const tesseract = require('node-tesseract-ocr');
 const path = require('path');
@@ -233,23 +234,38 @@ exports.documents_get_document = (req, res, next) => {
 exports.documents_update_emp = (req, res, next) => {
     const id = req.params.documentId;
     const clientId = parseJwt(req.headers.authorization.split(" ")[1]);
-    Document.updateOne({ _id: id }, { $set: { empId: clientId } })
+
+    User.findById(clientId)
+        .select('workingOn')
         .exec()
-        .then(result => {
-            res.status(200).json({
-                message: "document updated",
-                request: {
-                    type: 'GET',
-                    url: 'http://localhost:3000/documents/' + id
-                }
-            });
+        .then(data => {
+            if (data.workingOn != null) {
+                res.status(500).json({
+                    error: "already working on one"
+                });
+            } else {
+                User.updateOne({ _id: clientId }, { $set: {workingOn: id}})
+                .exec()
+                Document.updateOne({ _id: id }, { $set: { empId: clientId } })
+                    .exec()
+                    .then(result => {
+                        res.status(200).json({
+                            message: "document updated",
+                            request: {
+                                type: 'GET',
+                                url: 'http://localhost:3000/documents/' + id
+                            }
+                        });
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        res.status(500).json({
+                            error: err
+                        });
+                    });
+            }
         })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({
-                error: err
-            });
-        });
+
 }
 
 exports.documents_update_document = (req, res, next) => {

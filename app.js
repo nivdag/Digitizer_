@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const documentRoutes = require('./api/routes/documents');
 const ordersRoutes = require('./api/routes/orders');
 const userRoutes = require('./api/routes/user');
-const testRoutes = require('./api/routes/test');
 
 mongoose.connect('mongodb+srv://ocrniv:' +
  process.env.MONGO_ATLAS_PW +
@@ -19,6 +18,8 @@ mongoose.connect('mongodb+srv://ocrniv:' +
 
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));
+app.use('/results', express.static('results'));
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -38,7 +39,6 @@ app.use((req, res, next) => {
 app.use('/documents', documentRoutes);
 app.use('/orders', ordersRoutes);
 app.use('/user', userRoutes);
-app.use('/test', testRoutes);
 
 
 app.use((req, res, next) => {

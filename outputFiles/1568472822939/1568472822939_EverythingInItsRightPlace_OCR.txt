@@ -1,0 +1,254 @@
+In the case of detecting cars in the area, the system will try to do two things; first being
+
+recognizing the cars and second being the tracking. At the same time when it creates enough
+
+information from the context, it will reflect this information to the screen for watchers, e.g.
+
+security officer. If there is no car in the view, system will not show any information to
+
+watcher.
+
+5.2.
+
+State Transition Diagrams
+
+frame
+
+ 
+
+Video
+> Video Output Stream
+
+ 
+
+ 
+
+ 
+
+Video
+
+ 
+
+Video Input Stream
+
+ 
+
+ 
+
+Take a frame
+
+Detect movement
+direction and speed
+
+Plate number
+
+  
+
+  
+ 
+ 
+
+Extract car
+plate number
+
+   
+
+Image Plate
+
+   
+  
+  
+ 
+ 
+
+ 
+ 
+
+Plate location
+parameters
+
+    
+
+ 
+
+Image
+Locate car plate
+boundaries
+
+    
+ 
+ 
+
+Image
+
+Border location
+parameters
+
+Find car borders
+
+ 
+ 
+
+Image
+
+ 
+
+  
+  
+ 
+ 
+    
+
+number
+
+Border location
+parameters
+
+ 
+
+ 
+
+ 
+
+Car speed and
+direction
+
+ 
+  
+
+Image
+
+ 
+
+  
+ 
+
+Database
+
+User issues save
+
+frame
+
+ 
+
+ 
+
+ 
+
+    
+  
+
+identification
+Extra information
+
+Extra information Augment the view
+Check user click
+
+ 
+
+     
+   
+ 
+  
+
+ 
+
+Frame
+
+ 
+
+ 
+
+ 
+
+Border location
+parameters
+
+   
+
+ 
+
+ 
+
+Image
+
+Figure: Data-flow model
+
+Data structures in the data-flow model are shown below;
+
+ 
+
+Border location parameters
+
+Plate location parameters
+
+ 
+
++bottomLeft ; int
+HbottamRight : int
+H+height : int
+width : int
+
++bottomLeft ; int
++bottomRight : int
++topLeft : int
++topRight ; int
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Car speed and direction
+
+ 
+
+Plate number
+plate - string
+
+ 
+
++speed : double
+#direction : double
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+identification
+
+extra information
+
+ 
+
++identification : boo!
+
+Fattributes|] - string
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+13
+

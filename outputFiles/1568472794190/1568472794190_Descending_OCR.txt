@@ -1,0 +1,52 @@
+Figure: First Semester
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Work Starting time Ending time
+Central controller 20.02.2011 24.02.2011
+Image Acquisitor 24.02.2011 27.02.2011
+Recognizer 27.02.2011 14.03.2011
+Tracker 14.03.2011 24.03.2011
+Augmenter 24.03.2011 29.03.2011
+User Interface 29.03.2011 08.04.2011
+
+ 
+
+ 
+
+ 
+
+ 
+
+Figure: Second Semester
+
+6.3. Process Model
+
+Iterative and incremental development model is going to be used by the team
+
+7. Conclusion
+
+We have given information about the software requirements specification of Car Tracker
+project. The project aims to help security officers in an auto park by enhancing the view on
+their screens. Since the project is mainly about algorithms and implementation, usage of the
+system is a little bit straightforward. Therefore as the readers have noticed, this document
+has been laconic. Nevertheless, we believe this software will be very helpful for security
+
+officers in action.
+
+15
+
+ 
+

@@ -1,0 +1,52 @@
+ 
+ 
+
+Save current
+frame
+
+ 
+   
+  
+ 
+
+File frie sistem
+
+User Interface
+
+  
+  
+
+     
+
+See details of a car
+
+See record history of a car
+
+  
+ 
+
+Figure 2
+
+2.3. Constraints, Assumptions and Dependencies
+
+For simplicity and ensuring computability, the system makes the following assumptions:
+
+e Users are expected to look at the augmented view provided on the screen
+
+e Users have access to a mouse controller that controls the pointer of the screen
+e Camera should not have any flaws on its lens.
+
+e There should not be any obstacle between the camera and the road.
+
+e Camera is connected to the laptop that does the processing and viewing.
+
+e Camera will be 3 meters high looking from 45 degree.
+
+e System will only work between 8:00am and 5:00pm.
+
+e Speed of cars will be lower than 20 km /hour
+
+e There will be at least 5 meters between each car.
+
+e All employee’s cars are stored in the database.
+

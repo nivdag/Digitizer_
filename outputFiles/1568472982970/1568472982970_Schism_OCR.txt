@@ -1,0 +1,33 @@
+3) System user/watcher can click inside any of the recognized cars’ borders to view car
+speed, model, color, chassis, motor size, fuel type, employee ID, first name, last name,
+department and other information if present (‘other’ is detailed in section 4).
+
+4) System user/watcher can save a frame from the video stream.
+
+3.3. Non-functional Requirements
+There are two major goals relevant to the implementation. These are performance
+and accuracy of the system.
+3.3.1. Performance
+Performance is one of the two major issues for our system. The system should have a
+high performance such that the user should be able to see a the augmented view of the area
+streaming with 25 fps.
+3.3.2. Accuracy
+Accuracy of the system is important for the user. For this reason, under the given
+assumptions in Section 3.1, the system should have 100% accuracy, meaning that it should
+recognize all cars correctly.
+3.3.3. Simplicity
+Regarding user interface, an important design goal is keeping it simple. User interface
+should not be so complicated. Besides, the user should not need to do anything for basic
+usage of the system, that is seeing the speed of cars and seeing whether a car is owned by
+an employee or a visitor.
+3.3.4. Security
+Since the system will be used offline and by a single user, security is not an issue.
+3.3.5. Availability
+System will be available as long as the computer is running on is available.
+3.3.6. Maintainability
+Our system is specified for one task. There will not be so much change in the future.
+
+Therefore, maintainability does not have more importance than it has in a normal software.
+
+10
+

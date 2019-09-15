@@ -1,0 +1,27 @@
+1.7. Overview
+
+The rest of the SRS contains overall description about Car Tracker system and specific
+requirements which are organized according to different phases of the system. In section 2,
+overall description is given about the software. Section 3 explains the specific requirements.
+Section 4 mentions the data model. Then in section 5, information about how the system
+behaves in different conditions is given. Section 6 explains planning model of our team and
+
+Section 7 gives a conclusion.
+
+2. Overall Description
+
+2.1. Product Perspective
+
+Car Tracker system is a component of a general security system. It contributes to the
+protection of auto park entrance of a company. The Car Tracker system is used and managed
+by security officers to recognize and identify the driver of a car. Also, the officer can see
+information that eases his job.
+
+System consists of a camera and a laptop as hardware and MySQL and a real time OS(Windows,
+MaxOSxX or Linux). Camera captures the video, and laptop processes those images to extract
+information from it. Also, a database will be present in the system in order to fetch profile
+information for employees. At the front-end, laptop screen is used for presenting the output of
+the software to watcher. User will be using this screen to watch the augmented view and perform
+
+user events.
+

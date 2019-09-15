@@ -1,0 +1,35 @@
+1. Introduction
+
+1.1. Problem Definition
+
+Today most companies and settlements have their own parking lot that they don’t prefer
+strangers to use, also most companies want to keep an eye on entrance and exit times of
+their employee. Even though there are lots of systems to automate car entrance, still all
+those systems needs a security officer to decide on some exceptional actions which cannot
+be handled by an automated system. There should be a system that is not all by itself, but
+
+works together with the officer to help him/her decide on some actions.
+
+1.2. Purpose
+
+The purpose of this software requirements specification (SRS) is to establish the major
+requirements necessary to develop the Car Tracker project. The general objective of Car Tracker
+project is to provide a system which makes job of security officers easier. The project aims to do
+this by augmenting the view on the screen at which security officers look. The project
+requirements will define, in general terms, project perspective, functions, requirements,
+
+interfaces, user activities (if any), and behavioral models.
+
+1.3. Scope
+
+The product is named Car Tracker. It is being developed for a company which wants to
+make the job of security officers easier. The company wants to control car going in and out
+of our auto park. For this reason, they want software that will be responsible for recognizing
+and tracking the cars' going in and out through the entrance. The software will take its input
+from a camera located near the entrance and process this input to tag the cars in the view.
+Then it will provide an augmented view to the security officer. In this augmented view;
+speed of cars will be visible on the screen, at the same time cars will be recognized
+as employees or visitors. Detailed information for employees can also be seen in
+
+this view. Employee profile and detailed information will be accessed through a
+
